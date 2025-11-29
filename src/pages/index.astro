@@ -1,5 +1,5 @@
 ---
-// (optional) you can export props or load data here
+// No props needed
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -9,17 +9,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Update the title/description for Sovereign Vitality -->
-    <BaseHead
-      title="Sovereign Vitality – Nutrition Coaching"
-      description="Personalized health, wellness, and nutrition coaching for lasting vitality."
-    />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header />
 
     <main class="container mx-auto p-6">
-      <!-- Hero Section -->
+      <!-- Hero -->
       <section class="text-center mb-10">
         <h1 class="text-4xl font-bold mb-4">Sovereign Vitality</h1>
         <p class="text-xl text-gray-700">
@@ -27,7 +23,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         </p>
       </section>
 
-      <!-- About / Services -->
+      <!-- About -->
       <section class="mb-10">
         <h2 class="text-2xl font-semibold mb-3">Our Approach</h2>
         <p>
@@ -39,7 +35,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         </p>
       </section>
 
-      <!-- Key Benefits -->
+      <!-- Benefits -->
       <section class="grid md:grid-cols-2 gap-6 mb-10">
         <div class="p-4 border rounded shadow-sm">
           <h3 class="font-medium mb-2">Weight Management</h3>
@@ -62,7 +58,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         </div>
       </section>
 
-      <!-- Call to Action / Contact -->
+      <!-- CTA -->
       <section class="text-center bg-gray-50 py-8 rounded">
         <h2 class="text-2xl font-semibold mb-4">Ready to Start Your Journey?</h2>
         <p class="mb-4">
