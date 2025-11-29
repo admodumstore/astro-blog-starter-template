@@ -8,5 +8,4 @@ export default defineConfig({
 	site: "https://sovereignvitality.me",
 	output: "static",
 	integrations: [mdx(), sitemap()],
-	// Remove the adapter completely
 });
