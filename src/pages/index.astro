@@ -1,76 +1,83 @@
 ---
-// No props needed for this static page
----
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-
+---
 <!doctype html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+<body>
+  <Header />
 
-    <main class="container mx-auto p-6">
-      <!-- Hero -->
-      <section class="text-center mb-10">
-        <h1 class="text-4xl font-bold mb-4">Sovereign Vitality</h1>
-        <p class="text-xl text-gray-700">
-          Personalized health, wellness, and nutrition coaching for lasting vitality.
-        </p>
-      </section>
+  <main class="max-w-3xl mx-auto p-6">
+    <!-- Page heading -->
+    <h1 class="text-4xl font-bold mb-4">
+      🥦 Sovereign Vitality – Nutrition & Wellness Coaching
+    </h1>
 
-      <!-- About -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold mb-3">Our Approach</h2>
-        <p>
-          At Sovereign Vitality we help individuals of all ages achieve lasting vitality
-          through sustainable lifestyle changes. Whether you’re tackling weight management,
-          type 2 diabetes, chronic inflammation, IBS, fatigue, aches, or any other health
-          challenge, our coaching is tailored to your unique needs—empowering you to feel
-          better, live healthier, and thrive in every aspect of life.
-        </p>
-      </section>
+    <!-- Intro / tagline -->
+    <p class="text-lg mb-6">
+      Empowering individuals of all ages to achieve lasting vitality through
+      personalized health, wellness, and nutrition guidance.
+    </p>
 
-      <!-- Benefits -->
-      <section class="grid md:grid-cols-2 gap-6 mb-10">
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-medium mb-2">Weight Management</h3>
-          <p>Evidence‑based strategies to reach and maintain a healthy weight.</p>
-        </div>
+    <!-- Core service description -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Our Approach</h2>
+      <p>
+        At Sovereign Vitality we focus on sustainable lifestyle changes that
+        improve both physical and emotional well‑being. Whether you’re looking
+        to manage weight, control type‑2 diabetes, reduce inflammation,
+        alleviate IBS symptoms, combat chronic fatigue, or ease everyday aches,
+        our coaching is tailored to your unique goals.
+      </p>
+    </section>
 
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-medium mb-2">Type 2 Diabetes Support</h3>
-          <p>Nutrition plans and habit coaching to stabilize blood‑sugar levels.</p>
-        </div>
+    <!-- Key focus areas (list) -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">What We Help With</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Weight Management</li>
+        <li>Type‑2 Diabetes Support</li>
+        <li>Inflammation Reduction</li>
+        <li>Irritable Bowel Syndrome (IBS)</li>
+        <li>Fatigue & Energy Optimization</li>
+        <li>Aches & Musculoskeletal Comfort</li>
+        <li>General Health Challenges</li>
+      </ul>
+    </section>
 
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-medium mb-2">Inflammation & IBS Relief</h3>
-          <p>Targeted dietary adjustments to reduce gut discomfort and systemic inflammation.</p>
-        </div>
+    <!-- Call‑to‑action -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Get Started</h2>
+      <p>
+        Ready to feel better, live healthier, and thrive? Reach out today to
+        schedule a complimentary consultation.
+      </p>
+      <p class="mt-2">
+        📞 <strong>718‑916‑0629</strong><br />
+        ✉️ <a href="mailto:dr.sagi300@gmail.com" class="text-blue-600 hover:underline">
+          dr.sagi300@gmail.com
+        </a>
+      </p>
+    </section>
 
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-medium mb-2">Energy & Fatigue</h3>
-          <p>Personalized routines that boost stamina and combat chronic tiredness.</p>
-        </div>
-      </section>
+    <!-- Optional: quick navigation links (if you keep the original ideas) -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold mb-2">Next Steps</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Edit this page in <code>src/pages/index.astro</code></li>
+        <li>Update the site header in <code>src/components/Header.astro</code></li>
+        <li>Add your branding to the footer in <code>src/components/Footer.astro</code></li>
+        <li>Explore adding a blog section under <code>src/content/blog/</code></li>
+        <li>Customize blog post layouts in <code>src/layouts/BlogPost.astro</code></li>
+      </ul>
+    </section>
+  </main>
 
-      <!-- Call‑to‑Action -->
-      <section class="text-center bg-gray-50 py-8 rounded">
-        <h2 class="text-2xl font-semibold mb-4">Ready to Start Your Journey?</h2>
-        <p class="mb-4">
-          Book a free consultation and discover how a customized plan can transform your health.
-        </p>
-        <p class="font-medium">
-          📞 <a href="tel:7189160629" class="text-blue-600 hover:underline">718‑916‑0629</a> |
-          ✉️ <a href="mailto:dr.sagi300@gmail.com" class="text-blue-600 hover:underline">dr.sagi300@gmail.com</a>
-        </p>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
+  <Footer />
+</body>
 </html>
