@@ -1,6 +1,1 @@
-{
-    "$schema": "./node_modules/wrangler/config-schema.json",
-    "name": "astro-blog-starter-template",
-    "compatibility_date": "2025-11-29",
-    "pages_build_output_dir": "dist"
-}
+
