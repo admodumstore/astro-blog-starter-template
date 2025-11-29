@@ -1,9 +1,12 @@
 {
     "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "sovereign-vitality",
+    "main": "dist/_worker.js",
+    "compatibility_date": "2025-11-29",
     "routes": [
       {
-      "pattern": "sovereignvitality.me",
-      "custom_domain": true
-    }
-  ]
+        "pattern": "sovereignvitality.me",
+        "custom_domain": true
+      }
+    ]
 }
