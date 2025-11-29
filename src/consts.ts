@@ -1,5 +1,4 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
-export const SITE_TITLE = "Astro Blog";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+// src/consts.ts   (or src/consts.js)
+export const SITE_TITLE = "Sovereign Vitality – Nutrition Coaching";
+export const SITE_DESCRIPTION =
+  "Personalized health, wellness, and nutrition coaching for lasting vitality.";
