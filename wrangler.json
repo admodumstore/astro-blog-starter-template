@@ -10,5 +10,12 @@
 	"observability": {
 		"enabled": true
 	},
-	"upload_source_maps": true
+	"upload_source_maps": true,
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "routes": [
+      {
+      "pattern": "sovereignvitality.me",
+      "custom_domain": true
+    }
+  ]
 }
