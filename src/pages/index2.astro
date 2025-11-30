@@ -1,0 +1,460 @@
+-----
+
+## import BaseHead from ‘../components/BaseHead.astro’;
+import Header from ‘../components/Header.astro’;
+import Footer from ‘../components/Footer.astro’;
+import { SITE_TITLE, SITE_DESCRIPTION } from ‘../consts’;
+
+<!doctype html>
+
+<html lang="en">
+<head>
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+line-height: 1.6;
+}
+
+.hero {
+text-align: center;
+padding: 4rem 1.5rem;
+background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
+margin-bottom: 0;
+}
+
+.hero h1 {
+font-size: 2.8rem;
+color: #2d5016;
+margin-bottom: 1.5rem;
+line-height: 1.2;
+font-weight: 700;
+}
+
+.hero .subtitle {
+font-size: 1.3rem;
+color: #4a5568;
+max-width: 700px;
+margin: 0 auto 2.5rem;
+line-height: 1.7;
+font-weight: 400;
+}
+
+.cta-button {
+display: inline-block;
+background: #5a8c3a;
+color: white;
+padding: 1rem 2.5rem;
+border-radius: 6px;
+text-decoration: none;
+font-weight: 600;
+transition: all 0.3s;
+font-size: 1.1rem;
+}
+
+.cta-button:hover {
+background: #4a7330;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(90, 140, 58, 0.3);
+}
+
+.section {
+padding: 4rem 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.section-title {
+text-align: center;
+font-size: 2.2rem;
+color: #2d5016;
+margin-bottom: 1rem;
+font-weight: 700;
+}
+
+.section-subtitle {
+text-align: center;
+font-size: 1.2rem;
+color: #4a5568;
+max-width: 800px;
+margin: 0 auto 3rem;
+line-height: 1.6;
+}
+
+.who-we-are {
+background: white;
+}
+
+.who-we-are-content {
+max-width: 900px;
+margin: 0 auto;
+font-size: 1.1rem;
+color: #4a5568;
+line-height: 1.8;
+}
+
+.who-we-are-content p {
+margin-bottom: 1.5rem;
+}
+
+.who-we-are-content strong {
+color: #2d5016;
+font-weight: 600;
+}
+
+.struggles {
+background: #f8faf9;
+}
+
+.struggles-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 1.5rem;
+max-width: 900px;
+margin: 2rem auto 3rem;
+}
+
+.struggle-item {
+background: white;
+padding: 1.5rem;
+border-radius: 8px;
+border-left: 4px solid #5a8c3a;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+font-size: 1.05rem;
+color: #4a5568;
+line-height: 1.6;
+}
+
+.struggle-item::before {
+content: “→”;
+color: #5a8c3a;
+font-weight: bold;
+margin-right: 0.5rem;
+}
+
+.struggles-footer {
+text-align: center;
+font-size: 1.2rem;
+color: #2d5016;
+font-weight: 600;
+margin-top: 2rem;
+}
+
+.approach {
+background: white;
+}
+
+.approach-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2.5rem;
+margin-top: 3rem;
+}
+
+.approach-card {
+text-align: center;
+}
+
+.approach-card h3 {
+color: #2d5016;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.approach-card p {
+color: #4a5568;
+font-size: 1.05rem;
+line-height: 1.7;
+}
+
+.services {
+background: #f8faf9;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 2rem;
+margin-top: 2rem;
+}
+
+.service-card {
+background: white;
+padding: 2rem;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+transition: all 0.3s;
+}
+
+.service-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+color: #2d5016;
+margin-bottom: 1rem;
+font-size: 1.3rem;
+font-weight: 600;
+}
+
+.service-card p {
+color: #4a5568;
+line-height: 1.6;
+}
+
+.stats {
+background: #2d5016;
+color: white;
+text-align: center;
+padding: 3rem 1.5rem;
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 3rem;
+max-width: 900px;
+margin: 2rem auto 0;
+}
+
+.stat-item {
+}
+
+.stat-number {
+font-size: 3rem;
+font-weight: 700;
+color: #a8d89f;
+margin-bottom: 0.5rem;
+line-height: 1;
+}
+
+.stat-label {
+font-size: 1.1rem;
+color: white;
+opacity: 0.9;
+}
+
+.contact {
+text-align: center;
+padding: 4rem 1.5rem;
+background: white;
+}
+
+.contact h2 {
+color: #2d5016;
+font-size: 2.2rem;
+margin-bottom: 1rem;
+}
+
+.contact p {
+font-size: 1.2rem;
+color: #4a5568;
+margin-bottom: 2rem;
+}
+
+.contact-info {
+display: flex;
+justify-content: center;
+gap: 3rem;
+flex-wrap: wrap;
+margin-top: 2rem;
+}
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 1.1rem;
+color: #4a5568;
+}
+
+.contact-item a {
+color: #5a8c3a;
+text-decoration: none;
+transition: color 0.2s;
+font-weight: 600;
+}
+
+.contact-item a:hover {
+color: #2d5016;
+}
+
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 2rem;
+}
+
+.hero .subtitle {
+font-size: 1.1rem;
+}
+
+.section {
+padding: 3rem 1.5rem;
+}
+
+.section-title {
+font-size: 1.8rem;
+}
+
+.contact-info {
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.stats-grid {
+gap: 2rem;
+}
+
+.stat-number {
+font-size: 2.5rem;
+}
+}
+</style>
+
+</head>
+<body>
+<Header />
+<main>
+<section class="hero">
+<h1>Not Just Another Health Coach</h1>
+<p class="subtitle">
+Nutrition coaching that's personal, sustainable, and focused on real-life results — not restrictive diets or quick fixes.
+</p>
+<a href="mailto:coach@sovereignvitality.me" class="cta-button">Start Your Journey</a>
+</section>
+
+<section class="section who-we-are">
+<h2 class="section-title">We're More Than Meal Plans</h2>
+<div class="who-we-are-content">
+<p>
+At Sovereign Vitality, we know that understanding nutrition science is just the starting point. We've helped countless clients navigate weight management, diabetes, inflammation, and energy challenges. But what truly sets us apart is our focus on <strong>sustainable behavior change</strong> — the real-life habits that make your nutrition actually work for you.
+</p>
+<p>
+That's why we don't do cookie-cutter approaches or one-size-fits-all plans. We take the time to understand <strong>you</strong> — your lifestyle, your challenges, and what actually drives your choices.
+</p>
+<p>
+Our coaching goes beyond simple dietary advice by blending evidence-based nutrition, accountability, and real-life flexibility to help you build habits that last. This isn't another restrictive diet; it's personalized coaching that helps you think, act, and feel differently about food and your health.
+</p>
+</div>
+</section>
+
+<section class="section struggles">
+<h2 class="section-title">Do You Recognize These Health Struggles?</h2>
+<div class="struggles-list">
+<div class="struggle-item">
+Feeling trapped in cycles of dieting that leave you frustrated and stuck
+</div>
+<div class="struggle-item">
+Overwhelmed by conflicting health advice and unsure where to start
+</div>
+<div class="struggle-item">
+Struggling with blood sugar management or inflammation despite your best efforts
+</div>
+<div class="struggle-item">
+Dealing with low energy, brain fog, and persistent aches that hold you back
+</div>
+<div class="struggle-item">
+Trying (and failing) to make rigid eating plans fit into your real life
+</div>
+<div class="struggle-item">
+Feeling like you're doing everything "right" but still not seeing results
+</div>
+</div>
+<p class="struggles-footer">
+You want less confusion, less restriction, and more confidence in your health choices.
+</p>
+</section>
+
+<section class="section approach">
+<h2 class="section-title">Health Support That Actually Fits Your Life</h2>
+<p class="section-subtitle">
+The one-size-fits-all approach hasn't gotten you anywhere. Our coaching helps you move past old patterns and build habits that make health feel achievable — and sustainable.
+</p>
+<div class="approach-grid">
+<div class="approach-card">
+<h3>Collaboration</h3>
+<p>
+We work with you, not just for you. Your input, preferences, and real-life circumstances shape every recommendation we make.
+</p>
+</div>
+<div class="approach-card">
+<h3>Autonomy</h3>
+<p>
+Our goal is to build your confidence and knowledge so you can make informed choices — not create dependence on a coach.
+</p>
+</div>
+<div class="approach-card">
+<h3>Empathy</h3>
+<p>
+We guide you with understanding, ongoing support, and personalized strategies that honor where you are right now.
+</p>
+</div>
+</div>
+</section>
+
+<section class="section services">
+<h2 class="section-title">Specialized Support For Your Health Goals</h2>
+<div class="services-grid">
+<div class="service-card">
+<h3>Weight Management</h3>
+<p>Sustainable strategies for achieving and maintaining a healthy weight that works for your lifestyle and goals.</p>
+</div>
+<div class="service-card">
+<h3>Type 2 Diabetes</h3>
+<p>Evidence-based nutrition guidance to help manage blood sugar, improve metabolic health, and reduce medication dependence.</p>
+</div>
+<div class="service-card">
+<h3>Inflammation & IBS</h3>
+<p>Targeted dietary approaches to reduce chronic inflammation and alleviate digestive discomfort.</p>
+</div>
+<div class="service-card">
+<h3>Energy & Vitality</h3>
+<p>Combat fatigue, brain fog, and persistent aches with personalized nutrition and lifestyle interventions.</p>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Why Choose Sovereign Vitality</h2>
+<div class="stats-grid">
+<div class="stat-item">
+<div class="stat-number">100+</div>
+<div class="stat-label">Clients transformed</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">10+</div>
+<div class="stat-label">Years of experience</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">∞</div>
+<div class="stat-label">Sustainable results</div>
+</div>
+</div>
+</section>
+
+<section class="section contact">
+<h2>Ready to Transform Your Health?</h2>
+<p>Let's discuss how we can help you achieve your wellness goals with coaching that actually works for your life.</p>
+<a href="mailto:coach@sovereignvitality.me" class="cta-button">Get Started Today</a>
+<div class="contact-info">
+<div class="contact-item">
+<span>Phone:</span>
+<a href="tel:7189160629">718-916-0629</a>
+</div>
+<div class="contact-item">
+<span>Email:</span>
+<a href="mailto:coach@sovereignvitality.me">coach@sovereignvitality.me</a>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</body>
+</html>
